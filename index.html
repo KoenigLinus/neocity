@@ -9,7 +9,7 @@
 
         <style>
             * { 
-                font-family: "comic_mononormal", "Comic Sans MS", "Comic Sans", cursive;
+                font-family: "SF Mono", "Linux Libertine Display O", "comic_mononormal", cursive;
                 margin: None;
                 color: #fff;
             }
@@ -20,10 +20,13 @@
             body {
                 width: 800px;
                 background: rgb(153,187,255);
-                background: linear-gradient(114deg, rgba(153,187,255,1) 0%, rgba(53,109,219,1) 100%);
+                background: linear-gradient(114deg, rgb(116, 154, 228) 0%, rgba(53,109,219,1) 100%);
             }
             .divider {
-                margin: 100px 0;
+                margin: 10px 0;
+            }
+            .divider:after {
+                content: "--------------------------------------------------------------------------------";
             }
             .link-container {
                 display: flex;
@@ -44,44 +47,77 @@
                 overflow: hidden;
                 margin-right: 40px;
             }
+            .topper {
+                width: 100%;
+                margin-top: 20px;
+            }
+            img {
+              image-rendering: pixelated;
+            }
+            .big {
+              height: 300px;
+            }
+            .inline {
+                display: inline;
+                height: 16px;
+            }
+            section {
+                padding: 30px;
+                margin: 20px 0;
+                background-color: #ffffff50;
+            }
+
+
         </style>
     </head>
     <body>
-        <h1>the most best website ever to touch your retina!</h1>
+        <img src="./images/4199Construction-Lemmings.gif" alt="" class="topper">
 
-        <p>I am a german student near Kassel (somewhere right in the middle if you dont know)</p>
+        <h1>the most best website ever to touch your retina*!</h1>
 
-        <p>I love coding and design as well as enjoying (a typo? idk) life</p>
+        <p>*not yet, later <img src="./images/warning-sign.gif" alt="warning sign" class="inline"></p>
 
-        <div class="divider">----------------------------------------------------------------------------------------------------------------------</div>
+        <section>
+            <p><img src="./images/globe.gif" alt="Globe" class="inline"> I am a german student near Kassel (somewhere right in the middle if you dont know)</p>
+            <p><img src="./images/cube.gif" alt="matrix" class="inline"> I love coding and design as well as enjoying (a typo? idk) life</p>
+        </section>
+
+        <div class="divider"></div>
+
+        <a class="link-container" href="">
+            <div class="tube-container">
+                <img src="./images/tube.png" alt="Mario-like-tube" class="tube">
+            </div>
+            <div class="center">
+                <p>car focussed site</p>
+            </div>
+        </a>
+
+        <a class="link-container" href="">
+            <div class="tube-container">
+                <img src="./images/tube.png" alt="Mario-like-tube" class="tube">
+            </div>
+            <div class="center">
+                <p>music is everything</p>
+            </div>
+        </a>
+
+        <a class="link-container" href="">
+            <div class="tube-container">
+                <img src="./images/tube.png" alt="Mario-like-tube" class="tube">
+            </div>
+            <div class="center">
+                <p>where design is key</p>
+            </div>
+        </a>
+
+        <div class="divider"></div>
         
-        <a href="" class="center">
+        <a href="" class="center big">
             <img src="./images/enter-tv.gif" alt="enter">
         </a>
 
-        <div class="divider">----------------------------------------------------------------------------------------------------------------------</div>
-
-        <div class="link-container" href="">
-            <div class="tube-container">
-                <img src="./images/tube.png" alt="Mario-like-tube" class="tube">
-            </div>
-            <div class="center">
-                <p>Zu einem Ort</p>
-            </div>
-        </div>
-
-        <div class="link-container" href="">
-            <div class="tube-container">
-                <img src="./images/tube.png" alt="Mario-like-tube" class="tube">
-            </div>
-            <div class="center">
-                <p>Zu einem Ort</p>
-            </div>
-        </div>
-
-        <!--<iframe src="https://giphy.com/embed/WR9adQvRKA9kGcdI8w" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/mario-supermario-mariobros-WR9adQvRKA9kGcdI8w">via GIPHY</a></p>-->
-
-        <div class="divider">----------------------------------------------------------------------------------------------------------------------</div>
+        <div class="divider"></div>
 
         <p>Thank you to neocities for hosting my opinion. I appreciate that!</p>    
 
