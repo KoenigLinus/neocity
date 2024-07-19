@@ -6,112 +6,53 @@
         <title>linus-bedinus</title>
         <link href="/style.css" rel="stylesheet" type="text/css" media="all">
         <link href="/stylesheet.css" rel="stylesheet" type="text/css" media="all"> <!--For my imported font-->
-
-        <style>
-            * { 
-                font-family: "SF Mono", "Linux Libertine Display O", "comic_mononormal", cursive;
-                margin: None;
-                color: #fff;
-            }
-            html {
-                display: flex;
-                justify-content: center;
-            }
-            body {
-                width: 800px;
-                background: rgb(153,187,255);
-                background: linear-gradient(114deg, rgb(116, 154, 228) 0%, rgba(53,109,219,1) 100%);
-            }
-            .divider {
-                margin: 10px 0;
-            }
-            .divider:after {
-                content: "--------------------------------------------------------------------------------";
-            }
-            .link-container {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                margin: 50px 0;
-            }
-            .center {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            .tube {
-                height: 180px;
-            }
-            .tube-container {
-                height: 120px;
-                overflow: hidden;
-                margin-right: 40px;
-            }
-            .topper {
-                width: 100%;
-                margin-top: 20px;
-            }
-            img {
-              image-rendering: pixelated;
-            }
-            .big {
-              height: 300px;
-            }
-            .inline {
-                display: inline;
-                height: 16px;
-            }
-            section {
-                padding: 30px;
-                margin: 20px 0;
-                background-color: #ffffff50;
-            }
-
-
-        </style>
     </head>
     <body>
         <img src="./images/4199Construction-Lemmings.gif" alt="" class="topper">
 
         <h1>the most best website ever to touch your retina*!</h1>
 
-        <p>*not yet, later <img src="./images/warning-sign.gif" alt="warning sign" class="inline"></p>
+        <p>*not yet, maybe later <img src="./images/warning-sign.gif" alt="warning sign" class="inline"></p>
 
-        <section>
+        <section class="sub-section">
             <p><img src="./images/globe.gif" alt="Globe" class="inline"> I am a german student near Kassel (somewhere right in the middle if you dont know)</p>
             <p><img src="./images/cube.gif" alt="matrix" class="inline"> I love coding and design as well as enjoying (a typo? idk) life</p>
         </section>
 
         <div class="divider"></div>
 
-        <a class="link-container" href="">
+        <h2 class="highlite">Subpages:</h2>
+
+        <a class="link-container" href="car/car.html">
             <div class="tube-container">
                 <img src="./images/tube.png" alt="Mario-like-tube" class="tube">
             </div>
             <div class="center">
-                <p>car focussed site</p>
+                <p>&lt;- car focussed site</p>
             </div>
         </a>
 
-        <a class="link-container" href="">
+        <a class="link-container" href="/music/music.html">
             <div class="tube-container">
                 <img src="./images/tube.png" alt="Mario-like-tube" class="tube">
             </div>
             <div class="center">
-                <p>music is everything</p>
+                <p>&lt;- music is everything</p>
             </div>
         </a>
 
-        <a class="link-container" href="">
+        <a class="link-container" href="./design/design.html">
             <div class="tube-container">
                 <img src="./images/tube.png" alt="Mario-like-tube" class="tube">
             </div>
             <div class="center">
-                <p>where design is key</p>
+                <p>&lt;- where design is key</p>
             </div>
         </a>
 
         <div class="divider"></div>
+
+        <h2 class="highlite">Future buttons:</h2>
         
         <a href="" class="center big">
             <img src="./images/enter-tv.gif" alt="enter">
@@ -119,13 +60,13 @@
 
         <div class="divider"></div>
 
-        <p>Thank you to neocities for hosting my opinion. I appreciate that!</p>    
+        <section class="sub-section">
+            <p>Thank you to neocities for hosting my opinion. I appreciate that!</p>    
+            <img src="/neocities.png" style="display: inline;">
+            <p>Also thanks to for your font. I hope thats oki doki!</p>
+            <a style="display: inline;" href="https://dtinth.github.io/comic-mono-font/">dtinth - comic mono font - github</a>
+        </section>
 
-        <img src="/neocities.png">
-
-        <p>Also thanks to for your font. I hope thats oki doki!</p>
-
-        <a>https://dtinth.github.io/comic-mono-font/</a>
 
     </body>
 </html>

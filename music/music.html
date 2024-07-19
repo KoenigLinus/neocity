@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * { 
+        font-family: "SF Mono", "Linux Libertine Display O", "comic_mononormal", cursive;
+        margin: 0;
+        color: #fff;
+    }
+    body {
+        background-color: rgb(76, 110, 62);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 300px;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 400px 300px;
+        grid-template-rows: 200px 500px;
+        gap: 10px; /* Adjust the gap as needed */
+    }
+    .img {
+        width: 200px;
+        height: 200px;
+        grid-area: 1 / 1 / 2 / 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .img img {
+        height: 175px;
+    }
+    img {
+    image-rendering: pixelated;
+    }
+    .list {
+        grid-area: 2 / 1 / 3 / 2;
+        display: flex;
+        flex-direction: column;
+    }
+    .page {
+        background-color: aquamarine;
+        grid-area: 1 / 2 / 3 / 3;
+    }
+    #notion {
+        background-color: #f05f47;
+        color: #fff;
+    }
+    #ju-ju {
+        background-color: #4f5d40;
+        color: #fff;
+    }
+    #diesel-and-dust {
+        background-color: #111;
+        color: #e29e40;
+    }
+    #fiftyfifty {
+        background-color: #fff;
+        color: #74a7e1;
+    }
+    #dimond-life {
+        background-color: #000;
+        color: #93d3e6;
+    }
+    #rose {
+        background-color: #eee;
+        color: #ea5356;
+    }
+    .album {
+        font-size: 10px;
+        border: #fff;
+        border-width: 5px;
+        margin-bottom: 5px;
+        height: 15px;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        padding-left: 4px;
+    }
+    .info {
+        display: none;
+        opacity: 0.7;
+        height: 300px;
+    }
+    .info p {
+        opacity: 1;
+    }
+    .album:hover {
+        height: 315px;
+    }
+    .album:hover .info {
+        display: block;
+    }
+    iframe {
+        opacity: 1;
+        margin: 5px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="img">
+            <img src="./images/cd-player.gif" alt="cd">
+        </div>
+        <div class="list">
+            <div class="album" href="./albums/notion.html" id="notion">
+                <p>notion - The Rare Occasions</p>
+                <div class="info">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut, minus. Aperiam perspiciatis voluptates error cum rerum eum excepturi enim mollitia reiciendis sapiente, illum odio aliquam, nihil at nam sequi natus! Nisi ut recusandae eveniet reprehenderit quos, dolores nostrum, praesentium maxime dolore beatae officia sunt, voluptatem tempora fuga non veritatis ipsum!</p>
+                    <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/de/album/notion/1598145620?i=1598145621"></iframe>
+                </div>
+            </div>
+            <a class="album" href="./albums/Spellbound.html" id="ju-ju">Ju Ju remastered - Siouxsie & The Banshees</a>
+            <a class="album" href="./albums/bedsareburning.html" id="diesel-and-dust">Diesel and Dust - Midnight oil</a>
+            <a class="album" href="./albums/5050.html" id="fiftyfifty">50//50 - Vantage</a>
+            <a class="album" href="./albums/dimond-life.html" id="dimond-life">dimond life - Sade</a>
+            <a class="album" href="./albums/rose.html" id="rose">Can I Call You a Rose? - Thee Sacred Souls</a>
+        </div>
+        <div class="page"></div>
+    </div>
+</body>
+</html>

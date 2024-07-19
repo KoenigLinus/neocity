@@ -1,0 +1,70 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+* { 
+    font-family: "SF Mono", "Linux Libertine Display O", "comic_mononormal", cursive;
+    margin: 0;
+    color: #fff;
+}
+html {
+    display: flex;
+    justify-content: center;
+    /*background-color: #000;*/
+    background-image: url(./images/stars.gif);
+}
+body {
+    width: 800px;
+    background: rgb(153,187,255);
+    background: linear-gradient(114deg, rgb(116, 154, 228) 0%, rgba(53,109,219,1) 100%);
+    background-image: url(./images/stars.gif);
+}
+.divider {
+    margin: 10px 0;
+}
+.divider:after {
+    content: "--------------------------------------------------------------------------------";
+}
+.link-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 50px 0;
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tube {
+    height: 180px;
+}
+.tube-container {
+    height: 120px;
+    overflow: hidden;
+    margin-right: 40px;
+}
+.topper {
+    width: 100%;
+    margin-top: 20px;
+}
+img {
+  image-rendering: pixelated;
+}
+.big {
+  height: 300px;
+}
+.inline {
+    display: inline;
+    height: 16px;
+}
+.sub-section {
+    padding: 30px;
+    margin: 50px 0;
+    background-color: #ffffff50;
+}
+.sub-section * {
+    padding: 5px;
+}
+.highlite {
+    background-color: #ffffff50;
+}
