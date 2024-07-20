@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="album.css">
     <style>
     * { 
         font-family: "SF Mono", "Linux Libertine Display O", "comic_mononormal", cursive;
@@ -11,116 +12,137 @@
         color: #fff;
     }
     body {
-        background-color: rgb(76, 110, 62);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 300px;
-    }
-    .container {
-        display: grid;
-        grid-template-columns: 400px 300px;
-        grid-template-rows: 200px 500px;
-        gap: 10px; /* Adjust the gap as needed */
-    }
-    .img {
-        width: 200px;
-        height: 200px;
-        grid-area: 1 / 1 / 2 / 2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .img img {
-        height: 175px;
+        background-color: rgb(86, 115, 141);
+        width: 100vw;
+        overflow-x: hidden;
     }
     img {
-    image-rendering: pixelated;
-    }
-    .list {
-        grid-area: 2 / 1 / 3 / 2;
-        display: flex;
-        flex-direction: column;
-    }
-    .page {
-        background-color: aquamarine;
-        grid-area: 1 / 2 / 3 / 3;
-    }
-    #notion {
-        background-color: #f05f47;
-        color: #fff;
-    }
-    #ju-ju {
-        background-color: #4f5d40;
-        color: #fff;
-    }
-    #diesel-and-dust {
-        background-color: #111;
-        color: #e29e40;
-    }
-    #fiftyfifty {
-        background-color: #fff;
-        color: #74a7e1;
-    }
-    #dimond-life {
-        background-color: #000;
-        color: #93d3e6;
-    }
-    #rose {
-        background-color: #eee;
-        color: #ea5356;
+        image-rendering: pixelated;
     }
     .album {
-        font-size: 10px;
-        border: #fff;
-        border-width: 5px;
-        margin-bottom: 5px;
-        height: 15px;
-        width: 400px;
-        display: flex;
-        flex-direction: column;
-        padding-left: 4px;
-    }
-    .info {
         display: none;
-        opacity: 0.7;
-        height: 300px;
+        flex-direction: column;
+        /*height: 25px;*/
+    }
+    .album p {
+        padding: 4px;
     }
     .info p {
-        opacity: 1;
+        color: #fff;
+        margin-bottom: 20px;
     }
-    .album:hover {
-        height: 315px;
+    .info {
+        background-color: #9c9c9c43 !important;
+        padding: 10px;
     }
-    .album:hover .info {
-        display: block;
+    .icon, .list {
+        position: relative;
+        top: 400px;
+    }
+    .albums {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+    .albums .img img {
+        height: 800px;
+    }
+    .img {
+        display: inline-block;
+        margin-right: 30px;
+    }
+    .album:target {
+        display: flex;
+    }
+    .hd {
+        height: 1080px;
+        width: 1900px;
+        background-color: #e29e40;
+    }
+    .description {
+        padding: 300px;
+    }
+    header {
+        height: 300px;
+    }
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h1 {
+        font-size: 150px;
+    }
+    body:has(#t-fifty:checked) .description #fifty {
+        display: flex;
+    }
+    body:has(#t-notion:checked) .description #notion {
+        display: flex;
+    }
+    body:has(#t-war:checked) .description #war {
+        display: flex;
     }
     iframe {
-        opacity: 1;
-        margin: 5px;
+        width: 100%;
     }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="img">
-            <img src="./images/cd-player.gif" alt="cd">
-        </div>
-        <div class="list">
-            <div class="album" href="./albums/notion.html" id="notion">
-                <p>notion - The Rare Occasions</p>
-                <div class="info">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut, minus. Aperiam perspiciatis voluptates error cum rerum eum excepturi enim mollitia reiciendis sapiente, illum odio aliquam, nihil at nam sequi natus! Nisi ut recusandae eveniet reprehenderit quos, dolores nostrum, praesentium maxime dolore beatae officia sunt, voluptatem tempora fuga non veritatis ipsum!</p>
-                    <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/de/album/notion/1598145620?i=1598145621"></iframe>
-                </div>
+    <header class="center">
+        <h1>albums</h1>
+    </header>
+    <section class="albums">
+
+        <input type="checkbox" id="t-fifty" style="display: none;">
+        <label for="t-fifty" class="img">
+            <img src="./images/covers/50::50-r.png" alt="">
+        </label>
+
+        <input type="checkbox" id="t-notion" style="display: none;">
+        <label for="t-notion" class="img">
+            <img src="./images/covers/notion-r.png" alt="">
+        </label>
+
+        <input type="checkbox" id="t-war" style="display: none;">
+        <label for="t-war" class="img">
+            <img src="./images/covers/war-r.png" alt="">
+        </label>
+
+    </section>
+    <section class="description">
+
+        <div class="album notion" id="notion">
+            <p class="notion">notion - The Rare Occasions</p>
+            <div class="info">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut, minus. Aperiam perspiciatis voluptates error cum rerum eum excepturi enim mollitia reiciendis sapiente, illum odio aliquam, nihil at nam sequi natus! Nisi ut recusandae eveniet reprehenderit quos, dolores nostrum, praesentium maxime dolore beatae officia sunt, voluptatem tempora fuga non veritatis ipsum!</p>
+                <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/de/album/notion/1598145620?i=1598145621"></iframe>
             </div>
-            <a class="album" href="./albums/Spellbound.html" id="ju-ju">Ju Ju remastered - Siouxsie & The Banshees</a>
+        </div>
+
+        <div class="album war" id="war">
+            <p class="war">War - Galaxy</p>
+            <div class="info">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis minima aliquid nemo ab culpa. Vel molestiae in totam maiores eaque, quam eligendi, autem, voluptates provident et eum earum! Placeat, fuga incidunt dolores quam eaque soluta laborum ducimus sit eveniet cumque architecto, pariatur saepe recusandae magni, animi rem deleniti. Dolorum, omnis!</p>
+                <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/de/album/galaxy/1231974340?i=1231974676"></iframe>
+            </div>
+        </div>
+
+        <div class="album fifty" id="fifty">
+            <p class="fifty">50//50 - Vantage </p>
+            <div class="info">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis minima aliquid nemo ab culpa. Vel molestiae in totam maiores eaque, quam eligendi, autem, voluptates provident et eum earum! Placeat, fuga incidunt dolores quam eaque soluta laborum ducimus sit eveniet cumque architecto, pariatur saepe recusandae magni, animi rem deleniti. Dolorum, omnis!</p>
+                <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/de/album/50-50/1525917591?i=1525917877"></iframe>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="list">
             <a class="album" href="./albums/bedsareburning.html" id="diesel-and-dust">Diesel and Dust - Midnight oil</a>
             <a class="album" href="./albums/5050.html" id="fiftyfifty">50//50 - Vantage</a>
             <a class="album" href="./albums/dimond-life.html" id="dimond-life">dimond life - Sade</a>
             <a class="album" href="./albums/rose.html" id="rose">Can I Call You a Rose? - Thee Sacred Souls</a>
         </div>
-        <div class="page"></div>
     </div>
+    <div class="hd"></div>
 </body>
 </html>
